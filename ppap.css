@@ -28,20 +28,21 @@ body {
   clear: both;
 }
 
-.bot_line {
-  border-bottom: 1px solid #25272d;
-}
-
 /* layout */
 
-[class*="__cover"] {
+[class*="__inner"] {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: auto;
 }
 /* 컨텐츠 넣으면 뺄예정 */
-[class*="__cover"] {
+[class*="__inner"] {
   height: inherit;
+}
+
+.header{
+  position: relative;
+  z-index: 20;
 }
 
 /* -------------------------header-top--------------------------- */
@@ -54,11 +55,12 @@ body {
   display: flex;
   justify-content: center;
 }
-.header__top ul li {
+
+.header__top >.headertop__inner> ul > li {
   margin: 14px 30px;
 }
 
-.header__top ul a {
+.header__top .headertop__inner .util a {
   /* display:inline-block; */
   /* text-align: center; */
   /* width:110px; */
@@ -69,12 +71,17 @@ body {
   font: 16px;
   position: relative;
 }
+/* out line */
+.header__top ul a:focus {
+  outline: 1px dashed white;
+}
 
 .header__top ul a span {
   color: #df3326;
 }
 
-.header__top ul a:hover::before {
+
+.header__top .headertop__inner ul a:hover::before {
   content: "";
   display: block;
   bottom: -9px;
@@ -92,6 +99,9 @@ body {
   display: flex;
   /* position: relative; */
 }
+.header__bottom .headerbottom__inner{
+  display: flex;
+}
 
 /* ----logo---- */
 .header__bottom .logo {
@@ -101,8 +111,8 @@ body {
   bottom:55px; */
 }
 .header__bottom .logo img {
-  width: 223px;
-  height: 33px;
+  width: 290px;
+  /* height: 33px; */
 } /* logo end */
 
 /* gnb1+gnb2 */
@@ -110,6 +120,7 @@ body {
   display: flex;
   align-items: center;
   padding-top: 12px; /* 윗간격조절 */
+  padding-left: 16px;
 }
 
 /* ---------- */
@@ -123,7 +134,7 @@ body {
   display: flex; /* dep1까지만 flex */
 }
 .gnb1 > ul > li > a {
-  padding: 55px 12px;
+  padding: 55px 11px;
   /* font-family: , sans-serif; */
   color: white;
   font: 16px "Noto Sans KR";
@@ -185,7 +196,7 @@ body {
   position: absolute;
   top: 190px;
   left: 300px;
-  width: 1100px; /* dep2 위치 */
+  width: 1131px; /* dep2 위치 */
 }
 
 /* dep1 올릴시 나타남 */
@@ -228,6 +239,7 @@ body {
   /* width: calc(100% - 224px); */
   width: 100%;
   padding: 5px 15px;
+  line-height: 1.75;
 
   /* 12-11 추가 */
 }
@@ -249,4 +261,15 @@ body {
 .dep3 li:hover a {
   color: white;
   text-decoration: underline;
+}
+
+/* ----------------section1(main visual)--------------------- */
+
+.section1 .section1__inner{
+  position:static;/* 기본값 */
+  max-width:100%;
+  height: 950px;
+  background: url(./gist_images/gist_mainvisual.png) no-repeat;
+  background-size: cover; 
+
 }
