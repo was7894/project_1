@@ -173,7 +173,7 @@ body {
 
 .gnb2 ul li a {
   color: white;
-  font: 14px "arial";
+  font: 14px "Noto Sans KR", sans-serif;
   padding: 0 10px;
   position: relative;
 }
