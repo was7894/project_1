@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* gmarket font - header__top적용 */
+
 @font-face {
   font-family: "GmarketSansMedium";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
@@ -40,7 +41,7 @@ body {
   height: inherit;
 }
 
-.header{
+.header {
   position: relative;
   z-index: 20;
 }
@@ -56,7 +57,7 @@ body {
   justify-content: center;
 }
 
-.header__top >.headertop__inner> ul > li {
+.header__top > .headertop__inner > ul > li {
   margin: 14px 30px;
 }
 
@@ -72,14 +73,13 @@ body {
   position: relative;
 }
 /* out line */
-.header__top ul a:focus {
-  outline: 1px dashed white;
-}
+/* .header__top ul a:focus {
+  outline:1px dashed white;
+} */
 
 .header__top ul a span {
   color: #df3326;
 }
-
 
 .header__top .headertop__inner ul a:hover::before {
   content: "";
@@ -99,7 +99,7 @@ body {
   display: flex;
   /* position: relative; */
 }
-.header__bottom .headerbottom__inner{
+.header__bottom .headerbottom__inner {
   display: flex;
 }
 
@@ -265,11 +265,116 @@ body {
 
 /* ----------------section1(main visual)--------------------- */
 
-.section1 .section1__inner{
-  position:static;/* 기본값 */
-  max-width:100%;
+.section1 .section1__inner {
+  position: static; /* 기본값 */
+  max-width: 100%;
   height: 950px;
   background: url(./gist_images/gist_mainvisual.png) no-repeat;
-  background-size: cover; 
+  background-size: cover;
+}
+/* -----------------section2--------------------------------- */
+/* 전체틀 */
+.section2 {
+  width: 100%;
+  height: 877px;
+  background-color: white;
+  padding: 95px 0;
+}
 
+/* 섹션이너 1200.. */
+section [class*="__inner"] {
+  max-width: 1200px;
+}
+
+/* h2와 ul 플랙스 */
+.section2 .notice_1 {
+  /* dep2기준잡기위해 */
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* h2태그 */
+.notice_1 h2 {
+  display: inline-block;
+  font-size: 50px;
+  line-height: 52px;
+  color: #484848;
+  font-weight: 600;
+  letter-spacing: -3px;
+  font-family: "Nanum Myeongjo", serif;
+}
+/* dep1 메뉴들 플렉스 */
+.notice_1 .NOW_dep1 {
+  display: flex;
+  margin-left: 40px; /* h2태그와 간격주기위해 */
+}
+
+/* dep1 속성들 */
+.notice_1 .btn {
+  /* position: relative; */
+  display: inline-block;
+  padding: 0 10px 12px;
+  margin: 0 10px;
+  font-size: 20px;
+  line-height: 22px;
+  color: #4b4d50;
+  letter-spacing: -1px;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+/* dep2 전체 ul덩어리들 */
+.notice_1 .count {
+  /* display: none; */
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+}
+
+.NOW_dep2 li {
+  /* position: relative; */
+  display: flex;
+  width: 46%; /* morebox 공간주기위해 46퍼 */
+  padding: 6px 7.5% 6px 2.5%;
+
+  /* 태그 등의 영역 크기를 100px으로 설정했을 때
+
+100px 이상으로 <div>가 더 튀어나와서 크기를 100px으로 딱 맞추고 싶다? box-sizing : border-box;
+100px 미만으로 <div>가 더 적게 나와서 컨텐츠 영역만 100px으로 맞추고 싶다? box-sizing : content-box; */
+  /* ***************** */
+  /* 개념 다시 알아보기 */
+  box-sizing: border-box;
+  /* align-items: center; */
+}
+
+.NOW_dep2 li:nth-child(even) {
+  border-left: 1px dashed #ddd;
+}
+
+.NOW_dep1 .dep2_text {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding-right: 20px;
+  font-size: 17px;
+  line-height: 25px;
+  color: #000;
+  letter-spacing: -1px;
+  overflow: hidden;
+}
+.NOW_dep1 .day {
+  display: block;
+  font-size: 15px;
+  line-height: 22px;
+  color: #666;
+  letter-spacing: -1px;
+}
+
+.NOW_dep2 {
+  display: flex;
+  /* ********************* */
+  /* 개념 다시 알아보기 */
+  flex-wrap: wrap;
 }
