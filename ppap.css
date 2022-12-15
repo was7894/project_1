@@ -346,8 +346,6 @@ section [class*="__inner"] {
 
   /* 태그 등의 영역 크기를 100px으로 설정했을 때
 
-100px 이상으로 <div>가 더 튀어나와서 크기를 100px으로 딱 맞추고 싶다? box-sizing : border-box;
-100px 미만으로 <div>가 더 적게 나와서 컨텐츠 영역만 100px으로 맞추고 싶다? box-sizing : content-box; - 디폴트값 */
   /* ***************** */
   /* 개념 다시 알아보기 */
   /* width height값 영향받게 패딩값 영향x*/
@@ -385,4 +383,69 @@ section [class*="__inner"] {
   /* 컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때
 아이템 줄바꿈을 어떻게 할지 결정하는 속성입니다. */
   flex-wrap: wrap;
+}
+
+/* ---morebox 관련--- */
+
+.NOW_dep1 .count {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.NOW_dep1 .more_box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #c3c3c3;
+}
+
+.NOW_dep1 .more_box .more_txt {
+  /* text */
+  font: 13px "Noto Sans KR", sans-serif;
+  display: inline-block;
+  padding: 62px 0 20px 12px;
+  position: relative;
+  /* red pointer */
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  background-color: red;
+  width: 1px;
+  height: 76px; */
+}
+
+/* 가로줄 */
+.NOW_dep1 .more_box .more_txt::before {
+  /* red pointer */
+  content: "";
+  position: absolute;
+  left: 44px;
+  top: 28px;
+  background-color: red;
+  width: 76px;
+  height: 1px;
+  transition: all 0.4s;
+}
+
+/* 세로줄 */
+.NOW_dep1 .more_box .more_txt::after {
+  /* red pointer */
+  content: "";
+  position: absolute;
+  left: 83px;
+  top: -7px;
+  background-color: red;
+  width: 1px;
+  height: 76px;
+  transition: all 0.4s;
+}
+/* 호버시 redpointer 좌표값 */
+.NOW_dep1 .more_box:hover .more_txt::before {
+  left: 25px;
+  top: 36px;
+}
+
+.NOW_dep1 .more_box:hover .more_txt::after {
+  left: 62px;
+  top: 0px;
 }
