@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* gmarket font - header__top적용 */
+/* 나눔스퀘어font */
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
 
 @font-face {
   font-family: "GmarketSansMedium";
@@ -7,6 +9,8 @@
   font-weight: normal;
   font-style: normal;
 }
+/* noto sans kr */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 
 html {
   overflow-y: scroll;
@@ -137,9 +141,10 @@ body {
   padding: 55px 11px;
   /* font-family: , sans-serif; */
   color: white;
-  font: 16px "Noto Sans KR";
-  /* position: relative; */
-} /* middle GNB end*/
+  font: 17px "NanumSquare", sans-serif;
+}
+/* position: relative; */
+/* middle GNB end*/
 
 /* .gnb1 ul li a:hover:before {
   content: "";
@@ -155,8 +160,8 @@ body {
 /* right GNB2 */
 .gnb2 {
   margin-left: 24px;
-  /* position: absolute;
-  bottom:50px; */
+  position: absolute;
+  top: 94px;
 }
 .gnb2 ul {
   display: flex;
@@ -337,14 +342,15 @@ section [class*="__inner"] {
   /* position: relative; */
   display: flex;
   width: 46%; /* morebox 공간주기위해 46퍼 */
-  padding: 6px 7.5% 6px 2.5%;
+  padding: 10px 4.5% 9px 4.5%;
 
   /* 태그 등의 영역 크기를 100px으로 설정했을 때
 
 100px 이상으로 <div>가 더 튀어나와서 크기를 100px으로 딱 맞추고 싶다? box-sizing : border-box;
-100px 미만으로 <div>가 더 적게 나와서 컨텐츠 영역만 100px으로 맞추고 싶다? box-sizing : content-box; */
+100px 미만으로 <div>가 더 적게 나와서 컨텐츠 영역만 100px으로 맞추고 싶다? box-sizing : content-box; - 디폴트값 */
   /* ***************** */
   /* 개념 다시 알아보기 */
+  /* width height값 영향받게 패딩값 영향x*/
   box-sizing: border-box;
   /* align-items: center; */
 }
@@ -358,7 +364,7 @@ section [class*="__inner"] {
   width: 100%;
   height: 50px;
   padding-right: 20px;
-  font-size: 17px;
+  font: 16px "Noto Sans KR", sans-serif;
   line-height: 25px;
   color: #000;
   letter-spacing: -1px;
@@ -376,5 +382,7 @@ section [class*="__inner"] {
   display: flex;
   /* ********************* */
   /* 개념 다시 알아보기 */
+  /* 컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때
+아이템 줄바꿈을 어떻게 할지 결정하는 속성입니다. */
   flex-wrap: wrap;
 }
