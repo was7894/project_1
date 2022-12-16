@@ -12,20 +12,27 @@
 /* noto sans kr */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 
-html {
-  overflow-y: scroll;
-}
-body {
-  background-color: green;
-}
-
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   color: black;
 }
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  /* 계단현상 완화 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: green;
+}
+
 /* clear fix */
 .cf {
   content: "";
@@ -280,16 +287,19 @@ body {
 /* -----------------section2--------------------------------- */
 /* 전체틀 */
 .section2 {
+  position: relative; /* 캘린더박스 absolute 기준 */
   width: 100%;
   height: 877px;
   background-color: white;
   padding: 95px 0;
 }
 
-/* 섹션이너 1200.. */
+/* 섹션 이너 1200.. */
 section [class*="__inner"] {
   max-width: 1200px;
 }
+
+/* -- sec2_ notice1 -- */
 
 /* h2와 ul 플랙스 */
 .section2 .notice_1 {
@@ -299,7 +309,7 @@ section [class*="__inner"] {
   align-items: flex-end;
 }
 
-/* h2태그 */
+/* h2태그 (NOW)*/
 .notice_1 h2 {
   display: inline-block;
   font-size: 50px;
@@ -448,4 +458,66 @@ section [class*="__inner"] {
 .NOW_dep1 .more_box:hover .more_txt::after {
   left: 62px;
   top: 0px;
+}
+
+/* -- sec2_ notice2 -- */
+
+/* 캘린더전체위치기준 */
+.section2 .notice_3 {
+  position: relative;
+  top: 300px;
+  left: 608px;
+}
+/* 최상위 제목 */
+.notice_3 .cal_h2 {
+  font: 50px "Nanum Myeongjo", serif;
+  color: #df3127;
+  letter-spacing: -4px;
+  font-weight: bold;
+}
+/* 2nd 제목 */
+.notice_3 .cld_title {
+  font: 42px "Nanum Myeongjo", serif;
+  font-weight: bold;
+  margin: 20px 0 40px 0;
+}
+.notice_3 .cld_flex {
+  display: flex;
+}
+
+/* red_big : 일 */
+.notice_3 .cld_day {
+  font: 40px "Nanum Myeongjo", serif;
+  color: #df3127;
+  font-weight: bold;
+}
+/* 월 */
+.year_box .mon_year {
+  /* display:block; */
+  font: 14px "Noto Sans KR", sans-serif;
+  color: #595959;
+  line-height: 1.1;
+  margin: 10px 0 0 15px;
+}
+
+.notice_3 .more_box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #c3c3c3;
+}
+
+.notice_3 .more_box .more_txt {
+  /* text */
+  font: 13px "Noto Sans KR", sans-serif;
+  display: inline-block;
+  padding: 62px 0 20px 12px;
+  position: relative;
+  /* red pointer */
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  background-color: red;
+  width: 1px;
+  height: 76px; */
 }
