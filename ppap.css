@@ -469,38 +469,22 @@ section [class*="__inner"] {
   left: 608px;
 }
 /* 최상위 제목 */
+
 .notice_3 .cal_h2 {
   font: 50px "Nanum Myeongjo", serif;
   color: #df3127;
   letter-spacing: -4px;
   font-weight: bold;
 }
-/* 2nd 제목 */
-.notice_3 .cld_title {
-  font: 42px "Nanum Myeongjo", serif;
-  font-weight: bold;
-  margin: 20px 0 40px 0;
-}
-.notice_3 .cld_flex {
+.title_more_wrap {
   display: flex;
+  align-items: center;
 }
 
-/* red_big : 일 */
-.notice_3 .cld_day {
-  font: 40px "Nanum Myeongjo", serif;
-  color: #df3127;
-  font-weight: bold;
-}
-/* 월 */
-.year_box .mon_year {
-  /* display:block; */
-  font: 14px "Noto Sans KR", sans-serif;
-  color: #595959;
-  line-height: 1.1;
-  margin: 10px 0 0 15px;
-}
-
+/* more_box */
 .notice_3 .more_box {
+  left: 41.1%;
+  top: -30px;
   position: absolute;
   width: 100px;
   height: 100px;
@@ -520,4 +504,86 @@ section [class*="__inner"] {
   background-color: red;
   width: 1px;
   height: 76px; */
+}
+.notice_3 .more_box .more_txt::before {
+  /* red pointer */
+  content: "";
+  position: absolute;
+  left: 44px;
+  top: 28px;
+  background-color: red;
+  width: 76px;
+  height: 1px;
+  transition: all 0.4s;
+}
+
+/* 세로줄 */
+.notice_3 .more_box .more_txt::after {
+  /* red pointer */
+  content: "";
+  position: absolute;
+  left: 83px;
+  top: -7px;
+  background-color: red;
+  width: 1px;
+  height: 76px;
+  transition: all 0.4s;
+}
+
+.notice_3 .more_box:hover .more_txt::before {
+  left: 25px;
+  top: 36px;
+}
+
+.notice_3 .more_box:hover .more_txt::after {
+  left: 62px;
+  top: 0px;
+}
+/* //more_box */
+
+/* 2nd 제목 */
+.notice_3 .cld_title {
+  font: 42px "Nanum Myeongjo", serif;
+  font-weight: bold;
+  margin: 20px 0 40px 0;
+}
+.notice_3 .cld_flex {
+  display: flex;
+  margin-bottom: 3px;
+}
+
+/* red_big : 일 */
+.notice_3 .cld_day {
+  font: 40px "Nanum Myeongjo", serif;
+  color: #df3127;
+  font-weight: bold;
+}
+/* mon_year 과 cld_text flex */
+.notice_3 .cld_today {
+  display: flex;
+}
+/* 월 */
+.notice_3 .cld_today .year_box .mon_year {
+  /* display:block; */
+  font: 14px "Noto Sans KR", sans-serif;
+  color: #595959;
+  line-height: 1.1;
+  margin: 10px 0 0 15px;
+}
+/* list 전체 */
+.notice_3 .cld_today .cld_txt {
+  margin: 10px 0 0 30px;
+}
+
+.notice_3 .cld_today .cld_txt li {
+  margin-bottom: 25px;
+}
+.notice_3 .cld_today .cld_txt a {
+  margin-left: 5px;
+}
+.notice_3 .cld_today .cld_txt .today_txt {
+  font: 17px "Noto Sans KR", sans-serif;
+}
+.notice_3 .cld_today .cld_txt li img {
+  margin-bottom: 5px;
 }
