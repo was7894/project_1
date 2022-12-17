@@ -128,6 +128,8 @@ body {
 
 /* gnb1+gnb2 */
 .header__bottom .gnb {
+  /*  */
+  position: relative;
   display: flex;
   align-items: center;
   padding-top: 12px; /* 윗간격조절 */
@@ -168,7 +170,7 @@ body {
 .gnb2 {
   margin-left: 24px;
   position: absolute;
-  top: 94px;
+  top: 40px;
 }
 .gnb2 ul {
   display: flex;
@@ -206,9 +208,14 @@ body {
 .dep2 {
   display: none;
   position: absolute;
-  top: 190px;
-  left: 300px;
-  width: 1131px; /* dep2 위치 */
+  top: 140px;
+  left: 80px;
+  width: 1070px;
+  /* dep2 위치 */
+  /* position: relative;
+  top: 379px;
+  left: -224px;
+  width: 1131px; */
 }
 
 /* dep1 올릴시 나타남 */
@@ -462,10 +469,28 @@ section [class*="__inner"] {
 
 /* -- sec2_ notice2 -- */
 
+/* -- //sec2_ notice2 -- */
+.section2 .notice_2 {
+  position: relative;
+  top: 419px;
+  left: -71px;
+}
+
+.popup_zone .popup_title {
+  position: absolute;
+  left: -48px;
+  top: -122px;
+  font: 20px "Nanum Myeongjo", serif;
+  transform: rotate(270deg);
+}
+.popup_zone .popup_banner img {
+  width: 600px;
+}
+/* --notice3-- */
 /* 캘린더전체위치기준 */
 .section2 .notice_3 {
   position: relative;
-  top: 300px;
+  top: 12px;
   left: 608px;
 }
 /* 최상위 제목 */
@@ -587,3 +612,4 @@ section [class*="__inner"] {
 .notice_3 .cld_today .cld_txt li img {
   margin-bottom: 5px;
 }
+/* --//notice3-- */
