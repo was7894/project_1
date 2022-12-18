@@ -650,7 +650,7 @@ body {
   position: absolute;
   top: 575px;
   width: 1440px;
-  height: 335px;
+  height: 336px;
   /* background-color: #4f5354; */
   background-color: rgba(79, 83, 84, 0.9);
   z-index: 10;
@@ -659,7 +659,7 @@ body {
 /* section3 more box */
 .sec3_bg .more_box {
   position: absolute;
-  left: 1260px;
+  left: 1220px;
   top: 60px;
   width: 100px;
   height: 100px;
@@ -718,18 +718,29 @@ body {
 /* img */
 .sec3_bg .fourth {
   position: absolute;
-  left: 100px;
-  left: 160px;
-  top: 320px;
+  left: 120px;
+  top: 275px;
 }
+
+.sec3_bg .first {
+  position: absolute;
+  left: 809px;
+  top: 120px;
+}
+
+.billion_img {
+  position: absolute;
+  left: 617px;
+  top: 415px;
+}
+
 /* //img */
 
 /* text */
-
 .sec3_bg .sec3_title1 {
   position: absolute;
   top: 155px;
-  left: 108px;
+  left: 120px;
   font-weight: lighter;
   font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
@@ -738,21 +749,45 @@ body {
 }
 .sec3_title2 {
   position: absolute;
-  top: 180px;
-  left: 108px;
+  top: 185px;
+  left: 122px;
   font-size: 40px;
   font-family: "Nanum Myeongjo", serif;
 }
+
 .fourth_txt {
   position: absolute;
-  top: 334px;
-  left: 316px;
-  letter-spacing: -1px;
+  top: 300px;
+  left: 277px;
   font-size: 35px;
+  color: #2f363c;
+  letter-spacing: -2px;
   font-family: "Noto Sans KR", sans-serif;
   line-height: 40px;
 }
 .sec3_title2 span {
   color: red;
+}
+
+.first_txt {
+  position: absolute;
+  top: 209px;
+  left: 1030px;
+  line-height: 45px;
+  letter-spacing: -1px;
+  color: #2f363c;
+  font-size: 37px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.billion_txt {
+  position: absolute;
+  top: 445px;
+  left: 1035px;
+  letter-spacing: -2px;
+  line-height: 25px;
+  color: white;
+  font-size: 25px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 /* //text */
