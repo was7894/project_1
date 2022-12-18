@@ -715,7 +715,7 @@ body {
 }
 /* //section3 more box */
 
-/* img */
+/* section3 count img */
 .sec3_bg .fourth {
   position: absolute;
   left: 120px;
@@ -734,9 +734,9 @@ body {
   top: 415px;
 }
 
-/* //img */
+/* //section3 count img */
 
-/* text */
+/* section3 count text */
 .sec3_bg .sec3_title1 {
   position: absolute;
   top: 155px;
@@ -790,4 +790,62 @@ body {
   font-size: 25px;
   font-family: "Noto Sans KR", sans-serif;
 }
-/* //text */
+/* //section3 count text */
+/* section3 interview*/
+
+.sec3_bg .interview_content h3 {
+  position: absolute;
+  top: 630px;
+  left: 120px;
+  font-size: 32px;
+  font-family: "Nanum Myeongjo", serif;
+  color: white;
+  z-index: 15;
+}
+/* readmore box */
+.interview_content .read_more_box {
+  position: absolute;
+  top: 810px;
+  left: 120px;
+  border: 1px solid white;
+  width: 160px;
+  height: 50px;
+  z-index: 15;
+}
+.interview_content .read_more_box a {
+  position: absolute;
+  padding: 12px 47px 14px 36px;
+  font-size: 17px;
+  color: white;
+  letter-spacing: -1px;
+}
+.interview_content .read_more_box a::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 125px;
+  background-color: #dbdcdc;
+  width: 60px;
+  height: 2px;
+  transition: all 0.5s;
+}
+.interview_content .read_more_box a::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 172px;
+  background-color: #dbdcdc;
+  width: 15px;
+  height: 2px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.interview_content .read_more_box:hover a::before {
+  top: 25px;
+  left: 159px;
+}
+.interview_content .read_more_box:hover a::after {
+  top: 20px;
+  left: 206px;
+}
+/* //readmore box */
