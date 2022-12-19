@@ -472,12 +472,12 @@ body {
 }
 /* 호버시 redpointer 좌표값 */
 .NOW_dep1 .more_box:hover .more_txt::before {
-  left: 25px;
+  left: 23px;
   top: 36px;
 }
 
 .NOW_dep1 .more_box:hover .more_txt::after {
-  left: 62px;
+  left: 60px;
   top: 0px;
 }
 
@@ -570,12 +570,12 @@ body {
 }
 
 .notice_3 .more_box:hover .more_txt::before {
-  left: 25px;
+  left: 23px;
   top: 36px;
 }
 
 .notice_3 .more_box:hover .more_txt::after {
-  left: 62px;
+  left: 60px;
   top: 0px;
 }
 /* //more_box */
@@ -717,11 +717,11 @@ body {
 }
 /* 호버시 redpointer 좌표값 */
 .sec3_bg .more_box:hover .more_txt::before {
-  left: 25px;
+  left: 22px;
   top: 36px;
 }
 .sec3_bg .more_box:hover .more_txt::after {
-  left: 62px;
+  left: 60px;
   top: 0px;
 }
 /* //section3 more box */
@@ -968,30 +968,255 @@ body {
 }
 /* 호버시 redpointer 좌표값 */
 .sec4_layout .more_box:hover .more_txt::before {
-  left: 25px;
+  left: 23px;
   top: 36px;
 }
 
 .sec4_layout .more_box:hover .more_txt::after {
-  left: 62px;
-  top: 0px;
+  left: 60px;
+  top: -1px;
 }
 /* //section4 SNS*/
 
 /* ----------------------------------------------------------------- */
 /* section5  contents_box------------------------------------ */
 .section5 .section5__inner {
-  position: relative;
-  background: url(./gist_images/sec5_bg.jpg) no-repeat center center;
+  background: url(./gist_images/sec5_bg.jpg) no-repeat center;
   height: 937px;
-  width: 100%;
+  max-width: 100%;
 }
+.section5 .section5__inner .sec5_layout {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  height: inherit;
+}
+/* 전체 박스크기 */
+.sec5_layout .content_box {
+  position: relative;
+}
+/* a tag boxsize & common요소*/
+.sec5_layout .content_box a {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+}
+/* content box 전체 레이아웃 전체옮길떄*/
+.sec5_layout {
+  position: relative;
+  top: 200px;
+}
+/* 왼쪽정렬위해 */
+.content_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content_box li:hover a img {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+.content_box li:hover a span {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* 1box */
+.sec5_layout .content_box .content1 {
+  background-color: #2f363c;
+}
+.sec5_layout .content_box .content1 img {
+  position: absolute;
+  top: 45px;
+  left: 50px;
+}
+.sec5_layout .content_box .content1 span {
+  position: absolute;
+  left: 20px;
+  top: 110px;
+  color: white;
+}
+/* //1box */
+/* 2box */
+.sec5_layout .content_box .content2 {
+  background-color: #df3127;
+}
+.sec5_layout .content_box .content2 img {
+  position: absolute;
+  top: 45px;
+  left: 200px;
+}
+.sec5_layout .content_box .content2 span {
+  position: absolute;
+  left: 195px;
+  top: 110px;
+  color: white;
+}
+/* //2box */
+
+/* 3box */
+.sec5_layout .content_box .content3 {
+  background-color: white;
+}
+.sec5_layout .content_box .content3 img {
+  position: absolute;
+  top: 45px;
+  left: 29.3%;
+}
+.sec5_layout .content_box .content3 span {
+  position: absolute;
+  left: 27.5%;
+  top: 110px;
+  color: black;
+}
+/* //3box */
+
+/* 4box */
+.sec5_layout .content_box .content4 {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+.sec5_layout .content_box .content4 img {
+  position: absolute;
+  top: 45px;
+  left: 41.6%;
+}
+.sec5_layout .content_box .content4 span {
+  position: absolute;
+  left: 40.3%;
+  top: 110px;
+  color: black;
+}
+/* //4box */
+/* 5box null */
+.sec5_layout .content_box .null {
+  width: 150px;
+  height: 150px;
+}
+/* /5box null */
+/* 6box */
+.sec5_layout .content_box .content6 {
+  background-color: #df3127;
+}
+.sec5_layout .content_box .content6 img {
+  position: absolute;
+  top: 35px;
+  left: 66.5%;
+}
+.sec5_layout .content_box .content6 span {
+  position: absolute;
+  left: 65.3%;
+  top: 110px;
+  color: white;
+}
+/* //6box */
+/* 8box */
+.sec5_layout .content_box .content8 {
+  background-color: white;
+}
+.sec5_layout .content_box .content8 img {
+  position: absolute;
+  top: 48px;
+  left: 91.4%;
+}
+.sec5_layout .content_box .content8 span {
+  position: absolute;
+  left: 91.4%;
+  top: 110px;
+  color: black;
+}
+/* //8box */
+/* 10box handshake*/
+.sec5_layout .content_box .content10 {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+.sec5_layout .content_box .content10 img {
+  position: absolute;
+  top: 190px;
+  left: 16%;
+}
+.sec5_layout .content_box .content10 span {
+  position: absolute;
+  top: 257px;
+  left: 13%;
+  color: white;
+}
+/* //10box handshake*/
+/* 12box bulb */
+.sec5_layout .content_box .content12 {
+  background-color: #4a5466;
+}
+.sec5_layout .content_box .content12 img {
+  position: absolute;
+  top: 190px;
+  left: 42%;
+}
+.sec5_layout .content_box .content12 span {
+  position: absolute;
+  top: 257px;
+  left: 41.5%;
+  color: white;
+}
+/* 14box 3d 사이버 */
+.sec5_layout .content_box .content14 {
+  background-color: black;
+}
+.sec5_layout .content_box .content14 img {
+  position: absolute;
+  top: 200px;
+  left: 66.4%;
+}
+.sec5_layout .content_box .content14 span {
+  position: absolute;
+  top: 257px;
+  left: 65%;
+  color: white;
+}
+/* 14box 3d 사이버 */
+/* 15box 발전기금 */
+.sec5_layout .content_box .content15 {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+.sec5_layout .content_box .content15 img {
+  position: absolute;
+  top: 200px;
+  left: 78.8%;
+}
+.sec5_layout .content_box .content15 span {
+  position: absolute;
+  top: 257px;
+  left: 78.6%;
+  color: black;
+}
+/* //15box 발전기금 */
+/* 16box 전자도서관 */
+.sec5_layout .content_box .content16 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.sec5_layout .content_box .content16 img {
+  position: absolute;
+  top: 200px;
+  left: 91.6%;
+}
+.sec5_layout .content_box .content16 span {
+  position: absolute;
+  top: 257px;
+  left: 90.8%;
+  color: white;
+}
+/* //16box 전자도서관 */
 /* //section5 contents_box */
 
 /* footer ----------------------------------------------------------- */
 #footer .footer__inner {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   height: 244px;
   background-color: #464d52;
+}
+#footer .footer__inner .footer_layout {
+  width: 1200px;
+  margin: 0 auto;
+  height: inherit;
 }
