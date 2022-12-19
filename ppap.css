@@ -865,9 +865,9 @@ body {
 /* section4 SNS---------------------------------------------------- */
 .section4 .section4__inner {
   position: relative;
-  background: url(./gist_images/sec4_bg.gif) no-repeat center center;
   height: 225px;
   width: 100%;
+  background: url(./gist_images/sec4_bg.gif) no-repeat center center;
 }
 .section4 .section4__inner .sec4_layout {
   max-width: 1200px;
@@ -980,21 +980,59 @@ body {
 
 /* ----------------------------------------------------------------- */
 /* section5  contents_box------------------------------------ */
+
 .section5 .section5__inner {
-  background: url(./gist_images/sec5_bg.jpg) no-repeat center;
   height: 937px;
   max-width: 100%;
+  background: url(./gist_images/sec5_bg.jpg) no-repeat center;
+  background-size: cover;
 }
 .section5 .section5__inner .sec5_layout {
   position: relative;
   width: 1200px;
   margin: 0 auto;
   height: inherit;
+  top: 130px;
+}
+
+.section5__inner .sec5_layout .color_box {
+  position: relative;
+  top: -4px;
+  left: 685px;
+  width: 65px;
+  height: 65px;
+  background-color: #4a5466;
+}
+.color_box::before {
+  content: "";
+  position: absolute;
+  top: 365px;
+  left: -85px;
+  width: 65px;
+  height: 65px;
+  background-color: rgb(121, 143, 185);
+}
+.color_box::after {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 515px;
+  width: 65px;
+  height: 65px;
+  background-color: rgb(121, 143, 185);
 }
 /* 전체 박스크기 */
 .sec5_layout .content_box {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
+/* 왼쪽정렬위해 */
+/* .content_box {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
 /* a tag boxsize & common요소*/
 .sec5_layout .content_box a {
   display: inline-block;
@@ -1002,16 +1040,7 @@ body {
   height: 150px;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 15px;
-}
-/* content box 전체 레이아웃 전체옮길떄*/
-.sec5_layout {
-  position: relative;
-  top: 200px;
-}
-/* 왼쪽정렬위해 */
-.content_box {
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: -4px;
 }
 
 .content_box li:hover a img {
@@ -1029,7 +1058,7 @@ body {
 }
 .sec5_layout .content_box .content1 img {
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 50px;
 }
 .sec5_layout .content_box .content1 span {
@@ -1045,7 +1074,7 @@ body {
 }
 .sec5_layout .content_box .content2 img {
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 200px;
 }
 .sec5_layout .content_box .content2 span {
@@ -1062,7 +1091,7 @@ body {
 }
 .sec5_layout .content_box .content3 img {
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 29.3%;
 }
 .sec5_layout .content_box .content3 span {
@@ -1079,7 +1108,7 @@ body {
 }
 .sec5_layout .content_box .content4 img {
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 41.6%;
 }
 .sec5_layout .content_box .content4 span {
@@ -1101,7 +1130,7 @@ body {
 }
 .sec5_layout .content_box .content6 img {
   position: absolute;
-  top: 35px;
+  top: 30px;
   left: 66.5%;
 }
 .sec5_layout .content_box .content6 span {
@@ -1117,7 +1146,7 @@ body {
 }
 .sec5_layout .content_box .content8 img {
   position: absolute;
-  top: 48px;
+  top: 45px;
   left: 91.4%;
 }
 .sec5_layout .content_box .content8 span {
@@ -1133,12 +1162,12 @@ body {
 }
 .sec5_layout .content_box .content10 img {
   position: absolute;
-  top: 190px;
+  top: 185px;
   left: 16%;
 }
 .sec5_layout .content_box .content10 span {
   position: absolute;
-  top: 257px;
+  top: 250px;
   left: 13%;
   color: white;
 }
@@ -1149,7 +1178,7 @@ body {
 }
 .sec5_layout .content_box .content12 img {
   position: absolute;
-  top: 190px;
+  top: 185px;
   left: 42%;
 }
 .sec5_layout .content_box .content12 span {
@@ -1160,11 +1189,11 @@ body {
 }
 /* 14box 3d 사이버 */
 .sec5_layout .content_box .content14 {
-  background-color: black;
+  background-color: #2f363c;
 }
 .sec5_layout .content_box .content14 img {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: 66.4%;
 }
 .sec5_layout .content_box .content14 span {
@@ -1180,7 +1209,7 @@ body {
 }
 .sec5_layout .content_box .content15 img {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: 78.8%;
 }
 .sec5_layout .content_box .content15 span {
@@ -1196,7 +1225,7 @@ body {
 }
 .sec5_layout .content_box .content16 img {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: 91.6%;
 }
 .sec5_layout .content_box .content16 span {
@@ -1207,6 +1236,30 @@ body {
 }
 /* //16box 전자도서관 */
 /* //section5 contents_box */
+
+.sec5_layout .final_tit {
+  top: 140px;
+  position: relative;
+  /* 글씨 테두리 */
+  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+  /* 그림자 */
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  font-weight: 500;
+}
+/* final_tit */
+.sec5_layout .final_tit .tit01 {
+  color: white;
+  font-size: 33px;
+  font-family: "Nanum Myeongjo", serif;
+}
+.sec5_layout .final_tit .tit02 {
+  margin-bottom: 40px;
+  color: white;
+  font-size: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* //final_tit */
 
 /* footer ----------------------------------------------------------- */
 #footer .footer__inner {
