@@ -12,6 +12,33 @@
 /* noto sans kr */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 
+/* outline tab border 추가하기!!!@!@!@*/
+
+/* layer popup */
+#layer {
+  display: block;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background-color: #ccc;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  font-size: 1.3em;
+  padding: 3em;
+  box-sizing: border-box;
+  line-height: 2;
+  top: 50px;
+  left: 150px;
+}
+#layer button {
+  position: absolute;
+  cursor: pointer;
+  padding: 10px 20px;
+  right: 0;
+  top: 0;
+  background-color: #222;
+  color: #fff;
+}
 * {
   padding: 0;
   margin: 0;
@@ -1003,6 +1030,14 @@ body {
   height: 65px;
   background-color: #4a5466;
 }
+.section5__inner .sec5_layout .color_box2 {
+  position: absolute;
+  top: 211px;
+  left: 112%;
+  width: 65px;
+  height: 65px;
+  background-color: #df3127;
+}
 .color_box::before {
   content: "";
   position: absolute;
@@ -1269,7 +1304,95 @@ body {
   background-color: #464d52;
 }
 #footer .footer__inner .footer_layout {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   height: inherit;
+}
+.footer_layout .foot_dep1 ul {
+  display: flex;
+}
+.footer_layout .foot_dep1 ul li {
+  margin: 50px 12px;
+}
+.footer_layout .foot_dep1 a {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.footer_layout .foot_dep1 .pink_txt {
+  color: #f0b9b2;
+}
+
+.footer_layout .foot_wa {
+  position: absolute;
+  top: 25%;
+  left: 81%;
+}
+.footer_layout .foot_wa img {
+  width: 70px;
+}
+.footer_layout .address {
+  margin-top: -15px;
+  font-style: unset; /* address태그 이탤릭효과 없애기 */
+}
+.footer_layout .address p {
+  line-height: 21px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.footer_layout .footer_links {
+  position: relative;
+  top: -10px;
+  left: 83%;
+}
+.footer_layout .footer_links a {
+  color: white;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.footer_layout .footer_links .quick a {
+  /* position: relative; */
+  position: relative;
+  top: 13px;
+  /* left: 20px; */
+  padding: 16px 45px 14px 22px;
+}
+
+.footer_layout .footer_links .top a {
+  position: relative;
+  top: 13px;
+  padding: 14px 15px 14px;
+}
+
+.footer_layout .footer_links .quick {
+  display: inline-block;
+  width: 145px;
+  height: 50px;
+  border: 1px solid #ddd;
+}
+.footer_layout .footer_links .quick .quick_arr {
+  position: absolute;
+  top: 23px;
+  left: 115px;
+  width: 11px;
+}
+
+/* quick links sprite arr background */
+.footer_layout .footer_links .quick .quick_arr {
+  background: url(./gist_images/footer_up_down_arr.png) no-repeat;
+  width: 11px;
+  height: 6px;
+  /* transition: all 0.3s ease; */
+}
+/* .footer_layout .footer_links .quick:active .quick_arr {
+  transform: rotate(180deg);
+} */
+
+.footer_layout .footer_links .top {
+  display: inline-block;
+  width: 58px;
+  height: 50px;
+  border: 1px solid #ddd;
 }
