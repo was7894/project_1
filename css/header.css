@@ -1,0 +1,230 @@
+
+.header {
+  position: relative;
+  z-index: 20;
+}
+
+/* -------------------------header-top--------------------------- */
+.header__top {
+  background-color: #2e363d;
+  height: 50px;
+}
+
+.header__top .util {
+  display: flex;
+  justify-content: center;
+}
+
+.header__top > .headertop__inner > ul > li {
+  margin: 14px 30px;
+}
+
+.header__top .headertop__inner .util a {
+  /* display:inline-block; */
+  /* text-align: center; */
+  /* width:110px; */
+  font-family: "GmarketSansMedium";
+  color: white;
+  /* tip a에 padding을주면 클릭범위가 늘어난다 */
+  padding: 3px 50px;
+  font: 16px;
+  position: relative;
+}
+/* out line */
+/* .header__top ul a:focus {
+  outline:1px dashed white;
+} */
+
+.header__top ul a span {
+  color: #df3326;
+}
+
+.header__top .headertop__inner ul a:hover::before {
+  content: "";
+  display: block;
+  bottom: -9px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: #df3127;
+} /* header__top end */
+
+/* -------------------------header-bottom--------------------------- */
+.header__bottom {
+  /* background-color: #2e363d; */
+  background-color: rgb(46, 54, 61, 0.5);
+  height: 140px;
+  display: flex;
+  /* position: relative; */
+}
+.header__bottom .headerbottom__inner {
+  display: flex;
+}
+
+/* ----logo---- */
+.header__bottom .logo {
+  margin-left: 30px;
+  padding-top: 47px; /* 윗간격조절 */
+  /* position: absolute;
+  bottom:55px; */
+}
+.header__bottom .logo img {
+  width: 290px;
+  /* height: 33px; */
+} /* logo end */
+
+/* gnb1+gnb2 */
+.header__bottom .gnb {
+  /*  */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 12px; /* 윗간격조절 */
+  padding-left: 16px;
+}
+
+/* ---------- */
+/* gnb1(middle) */
+.gnb1 {
+  margin-left: 60px;
+  /* position: absolute;
+  bottom:42px; */
+}
+.gnb1 > ul {
+  display: flex; /* dep1까지만 flex */
+}
+.gnb1 > ul > li > a {
+  padding: 55px 11px;
+  /* font-family: , sans-serif; */
+  color: white;
+  font: 17px "NanumSquare", sans-serif;
+}
+/* position: relative; */
+/* middle GNB end*/
+
+/* .gnb1 ul li a:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -13px;
+  height: 2px;
+  width: 100%;
+  background-color: #df3127;
+} */
+
+/* ---------- */
+/* right GNB2 */
+.gnb2 {
+  margin-left: 24px;
+  position: absolute;
+  top: 40px;
+}
+.gnb2 ul {
+  display: flex;
+  align-items: center;
+}
+.gnb2 ul li {
+  margin-left: 10px;
+}
+
+.gnb2 ul li a {
+  color: white;
+  font: 14px "Noto Sans KR", sans-serif;
+  padding: 0 10px;
+  position: relative;
+}
+
+.gnb2 ul li:last-child a {
+  display: block;
+  padding-top: 15px;
+}
+
+.gnb2 ul li:nth-child(-n + 4) a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  width: 100%;
+  bottom: -10px;
+} /* right GNB end*/
+
+/* ******* */
+/* 12.12수정 */
+/* dep2 박스조정 */
+.dep2 {
+  display: none;
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  width: 1070px;
+  /* dep2 위치 */
+  /* position: relative;
+  top: 379px;
+  left: -224px;
+  width: 1131px; */
+}
+
+/* dep1 올릴시 나타남 */
+.dep1 li:hover .dep2 {
+  display: block;
+}
+.dep2 > li {
+  display: flex; /* de2 list의 다음 왼쪽정렬 */
+  background-color: #384046;
+}
+/* depth 2 */
+.dep2 > li > a {
+  /* new지식 */
+  flex-shrink: 0;
+  display: inline-block;
+  /* border-bottom: 1px solid #25272d; */
+  width: 199px;
+  background-color: #2e363d;
+  color: #df3326;
+  font: 14px "arial";
+  /* width: 150px; */
+  padding: 10px 30px 10px 10px;
+}
+.dep2 > li + li {
+  border-top: 1px solid #25272d;
+}
+
+.dep2 > li:hover > a {
+  display: block;
+  background-color: #ef4030;
+  color: white;
+  /* padding: 10px 0 10px 25px; */
+}
+
+/* depth 3 */
+/* 12.12수정 q */
+.dep3 {
+  /* q */
+  /* overflow: hidden; */
+  /* width: calc(100% - 224px); */
+  width: 100%;
+  padding: 5px 15px;
+  line-height: 1.75;
+
+  /* 12-11 추가 */
+}
+.dep3 img {
+  display: inline-block;
+  margin: 0 8px 0 8px;
+}
+/* 12.12수정 */
+.dep3 li {
+  float: left; /* dep3 list 컨텐츠 왼쪽정렬 */
+  width: 33.33%; /* 컨텐츠 3개씩 정렬 */
+}
+.dep3 li a {
+  color: #b4b6c1;
+  font-size: 14px;
+  padding: 4px 4px 10px 0;
+}
+
+.dep3 li:hover a {
+  color: white;
+  text-decoration: underline;
+}

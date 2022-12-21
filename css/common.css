@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* gmarket font - header__top적용 */
+/* 나눔스퀘어font */
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* noto sans kr */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+
+/* outline tab border 추가하기!!!@!@!@*/
+
+/* layer popup */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  /* 계단현상 완화 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: green; */
+}
+
+/* layout */
+[class*="__inner"] {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* 컨텐츠 넣으면 뺄예정 */
+[class*="__inner"] {
+  height: inherit;
+  /* 
+  height
+  50 header top
+  120 header bot
+  830 sec1
+  877 sec2
+  910 sec3
+  225 sec4
+  937 sec5
+  244 footer
+   */
+}
