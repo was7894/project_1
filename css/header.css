@@ -147,7 +147,14 @@
   height: 2px;
   width: 100%;
   bottom: -10px;
-} /* right GNB end*/
+}
+.hamber_menu{
+  position:relative;
+  top: 4rem;
+  left: 16rem;
+}
+
+/* right GNB end*/
 
 /* ******* */
 /* 12.12수정 */
