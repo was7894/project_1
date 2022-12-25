@@ -1,4 +1,3 @@
-
 .header {
   position: relative;
   z-index: 20;
@@ -20,9 +19,6 @@
 }
 
 .header__top .headertop__inner .util a {
-  /* display:inline-block; */
-  /* text-align: center; */
-  /* width:110px; */
   font-family: "GmarketSansMedium";
   color: white;
   /* tip a에 padding을주면 클릭범위가 늘어난다 */
@@ -59,87 +55,62 @@
 }
 .header__bottom .headerbottom__inner {
   display: flex;
+  align-items: center;
 }
 
 /* ----logo---- */
 .header__bottom .logo {
   margin-left: 30px;
-  padding-top: 47px; /* 윗간격조절 */
-  /* position: absolute;
-  bottom:55px; */
 }
 .header__bottom .logo img {
   width: 290px;
-  /* height: 33px; */
 } /* logo end */
 
 /* gnb1+gnb2 */
 .header__bottom .gnb {
-  /*  */
-  position: relative;
+  margin-left: 60px;
+}
+
+/* ---------- */
+/* gnb1(middle) */
+.dep1 {
   display: flex;
   align-items: center;
   padding-top: 12px; /* 윗간격조절 */
   padding-left: 16px;
 }
 
-/* ---------- */
-/* gnb1(middle) */
-.gnb1 {
-  margin-left: 60px;
-  /* position: absolute;
-  bottom:42px; */
-}
-.gnb1 > ul {
-  display: flex; /* dep1까지만 flex */
-}
-.gnb1 > ul > li > a {
+.dep1 > li > a {
   padding: 55px 11px;
   /* font-family: , sans-serif; */
   color: white;
   font: 17px "NanumSquare", sans-serif;
 }
-/* position: relative; */
-/* middle GNB end*/
-
-/* .gnb1 ul li a:hover:before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -13px;
-  height: 2px;
-  width: 100%;
-  background-color: #df3127;
-} */
 
 /* ---------- */
 /* right GNB2 */
-.gnb2 {
-  margin-left: 24px;
-  position: absolute;
-  top: 40px;
-}
-.gnb2 ul {
+
+.header_util {
   display: flex;
   align-items: center;
 }
-.gnb2 ul li {
+.header_util li {
   margin-left: 10px;
 }
 
-.gnb2 ul li a {
+.header_util li a {
   color: white;
   font: 14px "Noto Sans KR", sans-serif;
   padding: 0 10px;
   position: relative;
 }
 
-.gnb2 ul li:last-child a {
+.header_util li:last-child a {
   display: block;
   padding-top: 15px;
 }
 
-.gnb2 ul li:nth-child(-n + 4) a::before {
+.header_util li:nth-child(-n + 4) a::before {
   content: "";
   display: block;
   position: absolute;
@@ -148,10 +119,10 @@
   width: 100%;
   bottom: -10px;
 }
-.hamber_menu{
-  position:relative;
-  top: 4rem;
-  left: 16rem;
+.hamber_menu {
+  position: relative;
+  top: 9px;
+  left: 3px;
 }
 
 /* right GNB end*/
@@ -159,39 +130,72 @@
 /* ******* */
 /* 12.12수정 */
 /* dep2 박스조정 */
-.dep2 {
+.all_dep2 {
   display: none;
   position: absolute;
-  top: 140px;
-  left: 80px;
-  width: 1070px;
-  /* dep2 위치 */
-  /* position: relative;
-  top: 379px;
-  left: -224px;
-  width: 1131px; */
+  width: 100%;
+  top: 190px;
+  left: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #384046;
+}
+.dep2_inner {
+  display: flex;
+  width: 910px;
+  margin-left: 33%;
+}
+.dep2_tit {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  color: #df3326;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.dep2 {
+  display: block;
 }
 
 /* dep1 올릴시 나타남 */
-.dep1 li:hover .dep2 {
+.dep1 li:hover .all_dep2 {
   display: block;
 }
 .dep2 > li {
+  position: relative;
+  z-index: 1;
   display: flex; /* de2 list의 다음 왼쪽정렬 */
   background-color: #384046;
 }
+.dep2 > li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 210px;
+  height: 100%;
+  background: #303237;
+}
 /* depth 2 */
 .dep2 > li > a {
-  /* new지식 */
+  position: relative;
   flex-shrink: 0;
   display: inline-block;
-  /* border-bottom: 1px solid #25272d; */
-  width: 199px;
-  background-color: #2e363d;
+  width: 210px;
+  height: 50px;
+  background-color: #303237;
   color: #df3326;
   font: 14px "arial";
-  /* width: 150px; */
   padding: 10px 30px 10px 10px;
+}
+.dep2 > li:hover > a::before {
+  content: "";
+  position: absolute;
+  top: 20.4px;
+  left: 210px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid #ef4030;
 }
 .dep2 > li + li {
   border-top: 1px solid #25272d;
@@ -207,9 +211,6 @@
 /* depth 3 */
 /* 12.12수정 q */
 .dep3 {
-  /* q */
-  /* overflow: hidden; */
-  /* width: calc(100% - 224px); */
   width: 100%;
   padding: 5px 15px;
   line-height: 1.75;
