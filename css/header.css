@@ -136,11 +136,12 @@
   width: 100%;
   top: 190px;
   left: 0;
+  font-family: "Noto Sans KR", sans-serif;
   background-color: #384046;
 }
 .dep2_inner {
   display: flex;
-  width: 900px;
+  width: 910px;
   margin-left: 33%;
 }
 .dep2_tit {
@@ -170,7 +171,7 @@
   content: "";
   position: absolute;
   display: block;
-  width: 200px;
+  width: 210px;
   height: 100%;
   background: #303237;
 }
@@ -179,7 +180,7 @@
   position: relative;
   flex-shrink: 0;
   display: inline-block;
-  width: 200px;
+  width: 210px;
   height: 50px;
   background-color: #303237;
   color: #df3326;
