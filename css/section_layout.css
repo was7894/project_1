@@ -1,13 +1,71 @@
 /* ----------------section1(main visual)--------------------- */
 
 .section1 .section1__inner {
-  position: static; /* 기본값 */
+  position: relative; /* 기본값 */
   max-width: 100%;
   height: 950px;
   background: url(../gist_images/gist_mainvisual.png) no-repeat;
-
   background-size: cover;
 }
+.section1__inner .youtube {
+  position: absolute;
+  top: -122px;
+  width: 100%;
+  height: 1099px;
+}
+.youtube_more_box {
+  position: absolute;
+  bottom: 220px;
+  right: 130px;
+  width: 200px;
+  height: 60px;
+  border: 5px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.youtube_more_box a {
+  position: absolute;
+  padding: 13px 37px 13px 25px;
+}
+.youtube_more_box .YtBtnImg {
+  position: relative;
+  top: 2px;
+  left: -5px;
+}
+.youtube_more_box .yt_txt {
+  font-size: 17px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  letter-spacing: -1px;
+}
+.youtube_more_box a::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+
+  left: 170px;
+  background-color: #dbdcdc;
+  width: 60px;
+  height: 2px;
+  transition: all 0.5s;
+}
+.youtube_more_box a::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 217px;
+  background-color: #dbdcdc;
+  width: 15px;
+  height: 2px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.youtube_more_box:hover a::before {
+  left: 195px;
+}
+.youtube_more_box:hover a::after {
+  left: 243px;
+}
+
 /* section2------------------------------------------------------ */
 /* 전체틀 */
 .section2 {
