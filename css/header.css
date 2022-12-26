@@ -155,11 +155,11 @@
 .dep2 {
   display: block;
 }
-
+/* *********************************************** */
 /* dep1 올릴시 나타남 */
-.dep1 li:hover .all_dep2 {
+/* .dep1 li:hover .all_dep2 {
   display: block;
-}
+} */
 
 .dep2 > li {
   position: relative;
