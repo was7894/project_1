@@ -268,13 +268,15 @@
   transform: rotate(270deg);
 }
 .popup_zone .popup_banner img {
+  display: none;
+  position: absolute;
   width: 600px;
 }
 /* --notice3-- */
 /* 캘린더전체위치기준 */
 .section2 .notice_3 {
   position: relative;
-  top: 12px;
+  top: 295px;
   left: 608px;
 }
 /* 최상위 제목 */
