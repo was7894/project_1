@@ -34,3 +34,6 @@ function slidesMove() {
   sec2_slides.eq(nextIndex).fadeIn();
   currentIndex = nextIndex;
 }
+
+
+
