@@ -254,6 +254,7 @@
 /* -- sec2_ notice2 -- */
 
 /* -- //sec2_ notice2 -- */
+/* 공사중☠️공사중☠️공사중☠️공사중☠️공사중☠️공사중☠️공사중☠️*/
 .section2 .notice_2 {
   position: relative;
   top: 419px;
@@ -267,11 +268,44 @@
   font: 20px "Nanum Myeongjo", serif;
   transform: rotate(270deg);
 }
-.popup_zone .popup_banner img {
+/* 2023-01-01 추가 */
+.btn_play,
+.btn_stop {
+  display: none;
+}
+.btn_play.on,
+.btn_stop.on {
+  display: block;
+}
+/* .popup_zone .ctrl .play {
+  display: none;
+} */
+.popup_zone .button_list {
+  position: relative;
+  display: flex;
+  top: -17px;
+  left: 30px;
+}
+.button_list li button {
+  width: 10px;
+  height: 10px;
+  background: #d0dcda;
+  border: 0;
+  text-indent: -999em;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.button_list li button.on {
+  width: 50px;
+  background-color: red;
+}
+
+.popup_zone .popup_banner .sec_visual2_list img {
   display: none;
   position: absolute;
   width: 600px;
 }
+
 /* --notice3-- */
 /* 캘린더전체위치기준 */
 .section2 .notice_3 {
