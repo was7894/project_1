@@ -26,6 +26,8 @@ let ctrl = $(".popup_banner .ctrl a img");
 
 let button = $(".popup_banner .button_list li");
 
+let btnIndex =0;
+
 sec2_slides.eq(currentIndex).fadeIn();
 
 
@@ -64,17 +66,18 @@ btnPlay.click(function (e) {
 button.click(function (e) {
   e.preventDefault();
   btnIndex = $(this).index();
-  console.log(btnIndex);
+  // console.log(`click${btnIndex}`);
   button.removeClass("on");
   $(this).eq(btnIndex).find(".btn").addClass("on");
   slideStop();/* 스탑시킨후 버튼누른 페이지로 이동. */
   sec2_slides.stop().fadeOut();
   sec2_slides.eq(btnIndex).stop().fadeIn();
-
-
+  button.find(".btn").removeClass("on")
+  button.eq(btnIndex).find(".btn").addClass("on")
 });
 
 function slidesMove() {
+  // console.log(`move${btnIndex}`);
   button.eq(currentIndex).find(".btn").removeClass("on");
   let nextIndex = (currentIndex + 1) % count;
   sec2_slides.eq(currentIndex).fadeOut();
