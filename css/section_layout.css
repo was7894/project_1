@@ -303,14 +303,14 @@
 .popup_zone .popup_banner .sec_visual2_list img {
   display: none;
   position: absolute;
-  width: 600px;
+  width: 550px;
 }
 
 /* --notice3-- */
 /* 캘린더전체위치기준 */
 .section2 .notice_3 {
   position: relative;
-  top: 295px;
+  top: 250px;
   left: 608px;
 }
 /* 최상위 제목 */

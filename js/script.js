@@ -20,7 +20,6 @@ $(".dep1 li")
 
 /* section2 banner slides*/
 let sec2_slides = $(".popup_banner .sec_visual2_list a img");
-
 let count = sec2_slides.length;
 let currentIndex = 0;
 let ctrl = $(".popup_banner .ctrl a img");
@@ -29,15 +28,6 @@ let button = $(".popup_banner .button_list li");
 
 sec2_slides.eq(currentIndex).fadeIn();
 
-function slidesMove() {
-  // console.log(btnIndex);
-  button.eq(currentIndex).find(".btn").removeClass("on");
-  let nextIndex = (currentIndex + 1) % count;
-  sec2_slides.eq(currentIndex).fadeOut();
-  sec2_slides.eq(nextIndex).fadeIn();
-  currentIndex = nextIndex;
-  button.eq(currentIndex).find(".btn").addClass("on");
-}
 
 //timer 초기화
 let timer;
@@ -59,6 +49,7 @@ function slideStop() {
 
 slidePlay();
 
+// 이벤트핸들러(이벤트종류)
 btnStop.click(function (e) {
   e.preventDefault();
   slideStop();
@@ -70,10 +61,24 @@ btnPlay.click(function (e) {
 });
 
 //control index btn
-button.click(function () {
+button.click(function (e) {
+  e.preventDefault();
   btnIndex = $(this).index();
   console.log(btnIndex);
   button.removeClass("on");
   $(this).eq(btnIndex).find(".btn").addClass("on");
-  slidesMove();
+  slideStop();/* 스탑시킨후 버튼누른 페이지로 이동. */
+  sec2_slides.stop().fadeOut();
+  sec2_slides.eq(btnIndex).stop().fadeIn();
+
+
 });
+
+function slidesMove() {
+  button.eq(currentIndex).find(".btn").removeClass("on");
+  let nextIndex = (currentIndex + 1) % count;
+  sec2_slides.eq(currentIndex).fadeOut();
+  sec2_slides.eq(nextIndex).fadeIn();
+  currentIndex = nextIndex;
+  button.eq(currentIndex).find(".btn").addClass("on");
+}
