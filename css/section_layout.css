@@ -264,11 +264,16 @@
 .popup_zone .popup_title {
   position: absolute;
   left: -48px;
-  top: -122px;
+  top: -150px;
   font: 20px "Nanum Myeongjo", serif;
   transform: rotate(270deg);
 }
 /* 2023-01-01 추가 */
+.popup_zone .ctrl{
+  position:absolute;
+  left: 90px;
+  top: -62px;
+}
 .btn_play,
 .btn_stop {
   display: none;
@@ -277,14 +282,11 @@
 .btn_stop.on {
   display: block;
 }
-/* .popup_zone .ctrl .play {
-  display: none;
-} */
 .popup_zone .button_list {
   position: relative;
   display: flex;
-  top: -17px;
-  left: 30px;
+  top: -60px;
+  left: 120px;
 }
 .button_list li button {
   width: 10px;
@@ -303,7 +305,8 @@
 .popup_zone .popup_banner .sec_visual2_list img {
   display: none;
   position: absolute;
-  width: 550px;
+  top: -10px;
+  width: 621px;
 }
 
 /* --notice3-- */

@@ -21,12 +21,13 @@ $(".dep1 li")
 /* section2 banner slides*/
 let sec2_slides = $(".popup_banner .sec_visual2_list a img");
 let count = sec2_slides.length;
-let currentIndex = 0;
+
 let ctrl = $(".popup_banner .ctrl a img");
 
 let button = $(".popup_banner .button_list li");
-
+let currentIndex = 0;
 let btnIndex =0;
+
 
 sec2_slides.eq(currentIndex).fadeIn();
 
@@ -35,6 +36,17 @@ sec2_slides.eq(currentIndex).fadeIn();
 let timer;
 let btnPlay = $(".btn_play");
 let btnStop = $(".btn_stop");
+
+// 이벤트핸들러(이벤트종류)
+btnStop.click(function (e) {
+  e.preventDefault();
+  slideStop();
+});
+
+btnPlay.click(function (e) {
+  e.preventDefault();
+  slidePlay();
+});
 
 // slide play button
 function slidePlay() {
@@ -51,37 +63,35 @@ function slideStop() {
 
 slidePlay();
 
-// 이벤트핸들러(이벤트종류)
-btnStop.click(function (e) {
-  e.preventDefault();
-  slideStop();
-});
 
-btnPlay.click(function (e) {
-  e.preventDefault();
-  slidePlay();
-});
-
-//control index btn
+//section2 버튼클릭슬라이드전환
 button.click(function (e) {
   e.preventDefault();
   btnIndex = $(this).index();
-  // console.log(`click${btnIndex}`);
+  console.log(`click${btnIndex}`);
   button.removeClass("on");
   $(this).eq(btnIndex).find(".btn").addClass("on");
   slideStop();/* 스탑시킨후 버튼누른 페이지로 이동. */
+  
   sec2_slides.stop().fadeOut();
   sec2_slides.eq(btnIndex).stop().fadeIn();
   button.find(".btn").removeClass("on")
   button.eq(btnIndex).find(".btn").addClass("on")
+  
+  if(currentIndex !== btnIndex){
+    currentIndex = btnIndex;
+  }
 });
 
 function slidesMove() {
-  // console.log(`move${btnIndex}`);
-  button.eq(currentIndex).find(".btn").removeClass("on");
+  console.log(`move${btnIndex}`);//btnIndex값 가져와서 거기서부터 실행하도록 만들어야됨
+  
+  button.find(".btn").removeClass("on"); //실행시 버튼 on효과 다 제거
+  // button.eq(btnIndex).find("btn").addClass("on"); //3
   let nextIndex = (currentIndex + 1) % count;
   sec2_slides.eq(currentIndex).fadeOut();
   sec2_slides.eq(nextIndex).fadeIn();
   currentIndex = nextIndex;
   button.eq(currentIndex).find(".btn").addClass("on");
-}
+  }
+
