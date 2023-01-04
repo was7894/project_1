@@ -294,6 +294,7 @@
   left: 90px;
   top: -62px;
 }
+/* section2,3 버튼요소와 겹침 */
 .btn_play,
 .btn_stop {
   display: none;
@@ -308,6 +309,7 @@
   top: -60px;
   left: 120px;
 }
+/* cf sec3 버튼과 중복 */
 .button_list li button {
   width: 10px;
   height: 10px;
@@ -326,6 +328,7 @@
   display: none;
   position: absolute;
   top: -10px;
+  left: -20px;
   width: 621px;
 }
 
@@ -556,6 +559,21 @@
 }
 /* //section3 more box */
 
+/* sec3 버튼 위치들 나머지요소는 sec2css로 중복 */
+.interview_content .button_list {
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  top: 479px;
+  left: 785px;
+}
+.interview_content .ctrl {
+  position: absolute;
+  left: 900px;
+  top: 477px;
+  z-index: 11;
+}
+
 /* section3 count img */
 .sec3_bg .fourth {
   position: absolute;
@@ -635,10 +653,12 @@
 /* //section3 count text */
 
 /* section3 interview---------------------------------*/
-
+.sec3_bg .interview_content {
+  position: relative;
+}
 .sec3_bg .interview_content h3 {
   position: absolute;
-  top: 630px;
+  top: 460px;
   left: 120px;
   font-size: 32px;
   font-family: "Nanum Myeongjo", serif;
@@ -698,7 +718,7 @@
   position: relative;
 }
 .interview_content .interview_slides .interview_img_inner {
-  position: relative;
+  position: absolute;
   overflow: hidden;
   width: 300px;
   height: 300px;
@@ -707,9 +727,9 @@
   z-index: 11;
 }
 .interview_img_inner img {
-  position: absolute;
-  width: 500px;
-  left: -92px;
+  position: relative;
+  height: 100%;
+  left: 0px;
 }
 .interview_slides span {
   position: absolute;
