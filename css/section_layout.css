@@ -117,7 +117,7 @@
 }
 
 /* dep1 속성들 */
-.notice_1 .teb_menu >li >a {
+.notice_1 .teb_menu > li > a {
   /* position: relative; */
   display: inline-block;
   padding: 0 10px 12px;
@@ -129,25 +129,24 @@
   text-align: center;
   font-family: "Nanum Myeongjo", serif;
 }
-.teb_menu >li >a.active{
-  position:relative;
-  color:#df3127;
+.teb_menu > li > a.active {
+  position: relative;
+  color: #df3127;
 }
-.teb_menu li a.active::before{
-  content:'';
-  position:absolute;
-  width:0;
+.teb_menu li a.active::before {
+  content: "";
+  position: absolute;
+  width: 0;
   height: 3px;
-  left:50%;
+  left: 50%;
   bottom: 1px;
-  background-color: #df3127;;
+  background-color: #df3127;
   /* transition이 안먹힘.. */
-  /* transition: all 400ms; */ 
+  /* transition: all 400ms; */
 }
-.teb_menu li a.active.on::before{
-  width:100%;
-  left:0;
-  
+.teb_menu li a.active.on::before {
+  width: 100%;
+  left: 0;
 }
 
 /* dep2 전체 ul덩어리들 */
@@ -208,9 +207,8 @@
 
 /* ---morebox 관련--- */
 
-
 .teb_menu .all_teb_content {
-  display:none;/* dep2숨김 */
+  display: none; /* dep2숨김 */
 }
 
 .teb_menu .more_box {
@@ -291,8 +289,8 @@
   transform: rotate(270deg);
 }
 /* 2023-01-01 추가 */
-.popup_zone .ctrl{
-  position:absolute;
+.popup_zone .ctrl {
+  position: absolute;
   left: 90px;
   top: -62px;
 }
@@ -635,7 +633,8 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 /* //section3 count text */
-/* section3 interview*/
+
+/* section3 interview---------------------------------*/
 
 .sec3_bg .interview_content h3 {
   position: absolute;
@@ -658,10 +657,11 @@
 }
 .interview_content .read_more_box a {
   position: absolute;
-  padding: 12px 47px 14px 36px;
-  font-size: 17px;
+  padding: 12px 40px 14px 36px;
+  font-size: 16px;
   color: white;
-  letter-spacing: -1px;
+  font-family: "Noto Sans KR", sans-serif;
+  /* letter-spacing: px; */
 }
 .interview_content .read_more_box a::before {
   content: "";
@@ -693,6 +693,38 @@
   left: 206px;
 }
 /* //readmore box */
+/* sec3 slides */
+.interview_content .interview_slides {
+  position: relative;
+}
+.interview_content .interview_slides .interview_img_inner {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  top: 375px;
+  left: 70.8%;
+  z-index: 11;
+}
+.interview_img_inner img {
+  position: absolute;
+  width: 500px;
+  left: -92px;
+}
+.interview_slides span {
+  position: absolute;
+  z-index: 11;
+  top: 540px;
+  left: 120px;
+  width: 770px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* .interview_img_inner .sec31_img {
+} */
 
 /* section4 SNS---------------------------------------------------- */
 .section4 .section4__inner {
