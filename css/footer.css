@@ -22,6 +22,13 @@
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
 }
+.foot_dep1 li:hover a {
+  text-decoration: underline;
+}
+
+.footer_layout .foot_dep1 .blue_txt {
+  color: red;
+}
 .footer_layout .foot_dep1 .pink_txt {
   color: #f0b9b2;
 }

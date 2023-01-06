@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2H7NCTRWDV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2H7NCTRWDV");
+    </script>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +21,14 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+
+    <!-- op tag추가 -->
+    <meta property="og:title" content="광주과학기술원test" />
+    <meta property="og:url" content="웹페이지 URL" />
+    <meta property="og:type" content="웹페이지 타입(blog, website 등)" />
+    <meta property="og:image" content="표시되는 이미지" />
+    <meta property="og:title" content="웹사이트 이름" />
+    <meta property="og:description" content="웹페이지 설명" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png" />
@@ -31,19 +51,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans+KR&family=Special+Elite&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nanum+Myeongjo&family=Noto+Sans+KR&family=Special+Elite&display=swap" rel="stylesheet" />
 
-    <!-- <link rel="stylesheet" href="index3.css" /> -->
-    <!-- <link rel="stylesheet" href="./css/gist.css" /> -->
-    <link rel="stylesheet" href="./css/layer_popup.css" />
-    <link rel="stylesheet" href="./css/section_layout.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/media_1024px.css" />
-    <link rel="stylesheet" href="./css/media_768px.css" />
-    <!-- <link rel="stylesheet" href="./ppap.css" /> -->
+    <link rel="stylesheet" href="./css/import.css" />
 
     <title>광주과학기술원</title>
-    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
   </head>
 
   <body>
@@ -69,8 +79,8 @@
           <div class="headerbottom__inner">
             <!--헤딩태그 logo -->
             <h1 class="logo">
-              <a href="#none">
-                <img src="./gist_images/logo.png" alt="GIST" />
+              <a href="https://was7894.github.io/project_1">
+                <img src="./gist_images/logo.png" alt="GIST logo" />
               </a>
             </h1>
 
@@ -790,7 +800,6 @@
                 </li>
               </ul>
             </div>
-
             <!-- gnb1 end -->
 
             <!-- right gnb -->
@@ -802,7 +811,7 @@
               <li><a href="#none">English</a></li>
               <li><a href="#none">Portal</a></li>
               <li>
-                <!-- <a href="#none"><img src="./gist_images/mo_open.png" alt="" /></a> -->
+                <!-- <a href="#none"><img src="./gist_images/mo_open.png" alt="" ></a> -->
               </li>
             </ul>
 
@@ -828,15 +837,9 @@
         <div class="section1__inner">
           <ul>
             <li class="youtube">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/XfiXRUB252s?controls=0&autoplay=1&mute=1&loop=1&playlist=XfiXRUB252s"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/XfiXRUB252s?controls=0&autoplay=1&mute=1&loop=1&playlist=XfiXRUB252s" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe
+              ><!-- frameborder="0" -->
+
               <div class="youtube_more_box">
                 <a href="https://youtu.be/XfiXRUB252s" target="_blank"><img src="./gist_images/sec1_yt_btn.png" alt="gist youtube" class="YtBtnImg" /> <span class="yt_txt">Youtube More</span></a>
               </div>
@@ -1298,7 +1301,7 @@
         <div class="footer_layout">
           <div class="foot_dep1">
             <ul>
-              <li><a href="#none">개인정보처리방침 </a></li>
+              <li><a href="#none" class="blue_txt">개인정보처리방침 </a></li>
               <li><a href="#none">이메일무단수집거부 </a></li>
               <li><a href="#none">경영공시 </a></li>
               <li><a href="#none">대학정보공시</a></li>
@@ -1310,6 +1313,10 @@
             </ul>
           </div>
           <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" class="foot_wa"><img src="./gist_images/footer_wa.png" alt="" /></a>
+
+          <!-- <a href="https://validator.w3.org/check?uri=https://was7894.github.io/project_1/"><img src="https://www.w3.org/Icons/valid-html401" alt="유효성검사" ></a> -->
+
+          <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://was7894.github.io/project_1/"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="유효성검사" /></a>
 
           <div class="footer_links">
             <div class="quick">
@@ -1330,6 +1337,7 @@
       </div>
     </footer>
     <!-- //footer -->
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
