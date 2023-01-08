@@ -1,24 +1,60 @@
 #layer {
-  display: block;
   position: fixed;
-  width: 500px;
-  height: 500px;
-  background-color: #ccc;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 999;
+  display: block;
+  top: 6%;
+  left: 50%;
+  width: 412px;
+  height: 327px;
   font-size: 1.3em;
-  padding: 3em;
-  box-sizing: border-box;
   line-height: 2;
-  top: 50px;
-  left: 150px;
+  padding: 3em;
+  transform: translate(-50%);
+  box-sizing: border-box;
+  border-radius: 18px;
+  border: 3px solid white;
+  background-color: rgb(202 195 195 / 95%);
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 40%);
 }
+#layer img {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  width: 100px;
+  padding: 10px;
+  border: 3px solid white;
+  background: #76082491;
+  border-radius: 30px;
+  transform: translateX(-50%);
+}
+#layer span {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  color: rgba(36, 28, 194);
+}
+#layer button:hover {
+  background: rgb(190 180 180 / 82%);
+}
+
 #layer button {
   position: absolute;
   cursor: pointer;
-  padding: 10px 20px;
-  right: 0;
-  top: 0;
-  background-color: #222;
-  color: #fff;
+  padding: 2px 66px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 259px;
+  border: 3px solid #76082491;
+  border-radius: 20px;
+  background-color: rgb(202 195 195 / 95%);
+  color: rgba(36, 28, 194);
+  font-size: 20px;
+
+  font-family: "Noto Sans KR", sans-serif;
 }
